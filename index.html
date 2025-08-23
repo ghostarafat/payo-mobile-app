@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- daisy ui cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwindcss cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center"
+  >
+    <div
+      class="h-[130px] w-[300px] border-2 border-red-500 bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center"
+    >
+      <img src="assets/Group.png" alt="" class="" />
+    </div>
+    <form class="border-2 border-red-500 rounded-3xl p-8 w-[350px]">
+      <div>
+        <label class="font-semibold">Mobile Number</label> <br />
+        <input
+          type="text"
+          placeholder="Enter your number " id="mobile"
+          class="input bg-[#F4F5F7] mt-3 rounded-3xl "
+        />
+      </div>
+      <div class="mt-4">
+        <label class="font-semibold">4 Digit PIN</label> <br />
+        <input
+          type="text"
+          placeholder="Enter 4 Digit Pin" id="pin"
+          class="input bg-[#F4F5F7] mt-3 rounded-3xl"
+        />
+      </div>
+
+      <button
+        class="btn btn-primary mt-4 w-full rounded-3xl bg-[#0874F2] border-none text-white"
+        id="login-button"
+      >
+        Login
+      </button>
+    </form>
+    <!-- js script  -->
+    <script src="./script.js"></script>
+  </body>
+</html>
