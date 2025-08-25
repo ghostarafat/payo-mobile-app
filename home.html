@@ -26,7 +26,7 @@
     <div class="max-w-lg mx-auto bg-white rounded-b-3xl">
       <!-- Navbar Section -->
       <div
-        class="border-b-1 border-gray-300 min-h-[48px] flex justify-between items-center p-4"
+        class="border-b-1 border-gray-300 h-[48px] flex justify-between items-center p-4  "
       >
         <div class="flex items-center gap-2">
           <!-- nav logo  -->
@@ -51,7 +51,7 @@
 
       <!-- welcome to payooo section -->
 
-      <div class="mt-7 p-4">
+      <div class="mt-5 p-4">
         <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
         <p class="text-[#838383] mt-3">
           Enjoy easy and convenient financial services with us. Cashout charge
@@ -63,32 +63,50 @@
       <div class="min-h-[200px] grid grid-cols-3 grid-rows-2 gap-4 p-4">
         <!-- add money card -->
 
-        <div class="border-2 border-gray-300 text-center rounded-xl">
+        <div
+          id="add-money-card"
+          class="form-card border-2 border-gray-300 text-center rounded-xl"
+        >
           <img src="assets/wallet1.png" alt="" class="mx-auto p-4" />
           <h2>Add Money</h2>
         </div>
         <!-- cash out card -->
-        <div class="border-2 border-gray-300 text-center rounded-xl">
+        <div
+          id="cash-out-card"
+          class="form-card border-2 border-gray-300 text-center rounded-xl"
+        >
           <img src="assets/send1.png" alt="" class="mx-auto p-4" />
           <h2>Cash Out</h2>
         </div>
         <!-- transfer money card -->
-        <div class="border-2 border-gray-300 text-center rounded-xl">
+        <div
+          id="transfer-card"
+          class="form-card border-2 border-gray-300 text-center rounded-xl"
+        >
           <img src="assets/money1.png" alt="" class="mx-auto p-4" />
           <h2>Transfer Money</h2>
         </div>
         <!-- get bonus card -->
-        <div class="border-2 border-gray-300 text-center rounded-xl">
+        <div
+          id="bonus-card"
+          class="form-card border-2 border-gray-300 text-center rounded-xl"
+        >
           <img src="assets/bonus1.png" alt="" class="mx-auto p-4" />
           <h2>Get Bonus</h2>
         </div>
         <!-- pay bill card -->
-        <div class="border-2 border-gray-300 text-center rounded-xl">
+        <div
+          id="bill-card"
+          class="form-card border-2 border-gray-300 text-center rounded-xl"
+        >
           <img src="assets/purse1.png" alt="" class="mx-auto p-4" />
           <h2>Pay Bill</h2>
         </div>
         <!-- transaction card -->
-        <div class="border-2 border-gray-300 text-center rounded-xl">
+        <div
+          id="transactions-card"
+          class="form-card border-2 border-gray-300 text-center rounded-xl"
+        >
           <img src="assets/transaction1.png" alt="" class="mx-auto p-4" />
           <h2>Transaction</h2>
         </div>
@@ -96,11 +114,11 @@
     </div>
 
     <!-- ALL FORM SECTION   -->
-    <div class="all-form-sections max-w-lg mx-auto mt-8 p-4">
+    <div class="all-form-sections max-w-lg mx-auto mt-7 p-4">
       <!-- Add Money Form -->
-      <div>
+      <div class="form" id="add-money-parent">
         <h2 class="font-bold text-lg">Add Money</h2>
-        <form class="w- [350px] rounded-3xl p-6 mt-4 bg-white">
+        <form class="w- [350px] rounded-3xl p-6 mt-3 bg-white">
           <div>
             <h1 class="font-semibold">Select A Bank</h1>
             <select
@@ -129,7 +147,7 @@
             <input
               type="text"
               placeholder="Add Amount to withdraw"
-              id="amount-to-add"
+              id="add-amount"
               class="input bg-[#F4F5F7] mt-3 rounded-3xl w-full"
             />
           </div>
@@ -139,7 +157,7 @@
             <input
               type="text"
               placeholder="Enter 4 digit pin number"
-              id="pin-number"
+              id="add-pin"
               class="input bg-[#F4F5F7] mt-3 rounded-3xl w-full"
             />
           </div>
@@ -150,6 +168,71 @@
             Add Money
           </button>
         </form>
+      </div>
+
+      <!-- Cash Out Form -->
+      <div class="form" id="cash-out-parent" style="display: none">
+        <h2 class="font-bold text-lg">Cash Out</h2>
+
+        <form class="w- [350px] rounded-3xl p-6 mt-4 bg-white">
+          <div class="mt-4">
+            <label class="font-semibold">Agent Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 11 digit number"
+              class="input bg-[#F4F5F7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+          <div class="mt-4">
+            <label class="font-semibold">Amount</label>
+            <br />
+            <input
+              id="withdraw-amount"
+              type="text"
+              placeholder="Enter Amount to withdraw"
+              class="input bg-[#F4F5F7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+          <div class="mt-4">
+            <label class="font-semibold">Pin Number</label>
+            <br />
+            <input
+              type="text"
+              placeholder="Enter 4 digit pin number"
+              class="input bg-[#F4F5F7] mt-3 rounded-3xl w-full"
+            />
+          </div>
+          <button
+            id="withdraw-button"
+            class="btn btn-primary mt-4 w-full rounded-3xl bg-[#0874F2] border-none text-white text-xl"
+          >
+            Withdraw Money
+          </button>
+        </form>
+      </div>
+
+      <!-- transfer Money Form  -->
+      <div class="form" id="transfer-parent" style="display: none">
+        <h2 class="font-bold text-lg">Transfer Money</h2>
+      </div>
+
+      <!-- Get bonus Form -->
+      <div class="form" id="get-bonus-parent" style="display: none">
+        <h2 class="font-bold text-lg">Get Bonus</h2>
+      </div>
+      <!-- Pay Bill Form -->
+      <div class="form" id="pay-bill-parent" style="display: none">
+        <h2 class="font-bold text-lg">Pay Bill</h2>
+      </div>
+      <!-- Transaction Form -->
+      <div class="form" id="transactions-parent" style="display: none">
+        <div class="flex justify-between items-center">
+          <h2 class="font-bold text-lg">Transactions</h2>
+          <p class="text-[#838383]">View All</p>
+        </div>
+
+        <div id="transactions-container"></div>
       </div>
     </div>
 
